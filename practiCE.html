@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>practice session</title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+
+
+	
+  
+ 
+
+	//EVEN NUMBER 
+	function EvenOrOdd(num)
+	{
+		if(num%2==0)
+		{
+			console.log("number is even",num)
+		}
+		else{
+			console.log("number is odd",num)
+		}
+	}
+
+   //EvenOrOdd(11)
+
+   // larger of two number
+    function Even(number)
+    {
+    	let rem=number %2;
+    	let oddres=rem==1;
+    	return oddres;
+    }
+
+
+    console.log(Even(22))
+    console.log(Even(21))
+
+
+   function Large(num1,num2)
+   {
+   	if(num1>=num2)
+   	{
+   		console.log('number 1 is large',num1)
+   	}
+   	else{
+   		console.log('number 2 is large',num2)
+   	}
+   }
+   
+   function largeTwo(num1,num2)
+   {
+   	return num1>num2? num1:num2;
+   }
+
+   console.log(largeTwo(10,11))
+   //Large(23,34)
+
+
+   function fehrenheit(celsius){
+   	return 9/5*celsius+32;
+   }
+
+   console.log(fehrenheit(0))
+      console.log(fehrenheit(10))
+
+
+
+
+
+
+
+//json storing 
+
+      //OBJECT IN JAVASRIPTS
+      let product={
+      	tshir:'s',
+      	price:230,
+
+      }
+      console.log(product)
+      console.log(typeof product)
+
+      //FROM OBJECT TO JSON
+		 let json=JSON.stringify(product)
+		 console.log(json);
+		 // STRING 
+		 console.log(typeof json)
+
+
+		 // FROM JSON TO OBJECT
+
+		 let conjson=JSON.parse(json)
+		 console.log(conjson)
+		 console.log(typeof conjson)
+
+		 // TO STORE IN LOCAL DISK FOR PERMANENTS
+
+
+		 // GIVE THE VALUE IN KEY VALUE PAIR BUT INSIDE DOUBLE QUOTIONS
+
+		 // localStorage.setItem("json","javascript object notation")
+		 // localStorage.setItem("DOM","documents  object method")
+		 localStorage.setItem('product',JSON.stringify(product))
+
+
+
+
+		 //TO PRINT THE VALUE FROM LOCAL STORAGE
+		 let product2= JSON.parse(localStorage.getItem('product'));
+		 console.log("value of ",product2)
+		 console.log(localStorage.getItem('DOM'))
+
+
+		 //TO REMOVE THE ITEM FROM LOCAL STORAGE
+
+		 localStorage.removeItem('DOM')
+
+
+		 //TO CLEAN THE LOCAL STORAGE
+		 localStorage.clear()
+</script>
+</body>
+</html>
